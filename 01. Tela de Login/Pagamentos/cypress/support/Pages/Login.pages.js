@@ -11,4 +11,5 @@ class Pages {
     }
 
 
+
 } export default new Pages()
