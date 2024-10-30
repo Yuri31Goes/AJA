@@ -8,5 +8,11 @@ class PagesPagamentos{
         cy.get(Pagamentos.BotãoEntrar).click()
     }
 
+    AdicionarBeneficiário(CPF, Nome,NomeM,Datadenascimento,Sexo,Município){
+        cy.get(Pagamentos.BotãoBeneficiários).click()
+        cy.get(Pagamentos.SelectBeneficiário).click()
+        cy.get(Pagamentos.BotãoNovoBeneficiário).click()
+    }
+
 
 }export default new PagesPagamentos()
