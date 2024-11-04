@@ -14,7 +14,7 @@ AdicionarBeneficiário(dados) {
     cy.get(Pagamentos.SelectBeneficiário).click();
     cy.get(Pagamentos.BotãoNovoBeneficiário).click();
     cy.get(Pagamentos.FormCPF).type(dados.CPF);
-    cy.get(Pagamentos.FormmeNome).type(dados.Nome); // Supondo que Nome é fornecido no objeto
+   /* cy.get(Pagamentos.FormmeNome).type(dados.Nome); 
     cy.get(Pagamentos.FormeNomeMãe).type(dados.NomeMãe);
     cy.get(Pagamentos.FormDatadeNascimento).type(dados.DataNascimento);
     //cy.get(Pagamentos.FormSexobtn).click();
@@ -26,6 +26,7 @@ AdicionarBeneficiário(dados) {
     cy.get(Pagamentos.FormNumeroEndereço).type(dados.NumEndereço);
     cy.get(Pagamentos.FormComplemento).type(dados.Complemento);
     cy.get(Pagamentos.FormBairrro).type(dados.Bairro);
+    */
   }
 
 }export default new PagesPagamentos()

@@ -1,0 +1,15 @@
+   
+          {
+    "CPF": "046.238.871-97",
+    "Senha": "senhaSegura123",
+    "Nome": "João da Silva",
+    "NomeMãe": "Maria da Silva",
+    "DataNascimento": "01/01/1980",
+    "Sexo": "1", 
+    "Município": "1", 
+    "Endereço": "Rua Exemplo",
+    "NumEndereço": "123",
+    "Complemento": "Apto 101",
+    "Bairro": "Centro"
+  
+}
