@@ -1,16 +1,16 @@
    
           {
-    "CPF": "046.238.871-97",
-    "Senha": "senhaSegura123",
-    "Nome": "João da Silva",
-    "NomeMãe": "Maria da Silva",
-    "DataNascimento": "01/01/1980",
-    "Sexo": "1", 
-    "Município": "1", 
-    "Cep":"40230077",
-    "Endereço": "Rua Exemplo",
-    "NumEndereço": "123",
-    "Complemento": "Apto 101",
-    "Bairro": "Centro"
+"CPF": "147.560.465-33",               
+    "Senha": "senhaIncorreta456",           
+    "Nome": "Carlos Souza",                
+    "NomeMãe": "Ana Souza",                
+    "DataNascimento": "15/02/1990",         
+    "Sexo": "2",                           
+    "Município": "2",                      
+    "Cep": "40301000",                      
+    "Endereço": "Rua Nova",                 
+    "NumEndereço": "456",                   
+    "Complemento": "Casa",                 
+    "Bairro": "Liberdade"                   
     
 }

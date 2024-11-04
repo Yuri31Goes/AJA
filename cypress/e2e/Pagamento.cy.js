@@ -24,7 +24,9 @@ describe('Cadastro de Beneficiário', () => {
    
   })
 
-  PagamentoPages.AdicionarOrgãoPagador('1')
+  PagamentoPages.SalvarCadastro()
+  PagamentoPages.ValidarCadastro()
+ 
 
   
   

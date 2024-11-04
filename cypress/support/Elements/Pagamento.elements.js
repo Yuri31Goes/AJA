@@ -35,6 +35,7 @@ export const PagementosElemens = {
      return `#j_idt261\\:orgPagador_${number}`
     },
     AdicionarOrgão: '#j_idt261\\:btAdicionarOrgaoPagador > .ui-button-text',
-    SalvarOrgão: '#form\\:saveBtn > .ui-button-text'
-    
+    Salvar: '#form\\:saveBtn > .ui-button-text',
+    Mensagem:'[data-notify="title"]'
+   
 }

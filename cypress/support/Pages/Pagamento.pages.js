@@ -29,6 +29,10 @@ class PagesPagamentos{
     
   }
 
+  SalvarCadastro(){
+    cy.get(Pagamentos.Salvar).click()
+  }
+
   AdicionarOrgãoPagador(number){
     cy.get(Pagamentos.AbaOrgão).click()
     cy.get(Pagamentos.BotãoAddOrgão).click()
@@ -37,5 +41,8 @@ class PagesPagamentos{
     cy.get(Pagamentos.AdicionarOrgão).click()
     //cy.get(Pagamentos.SalvarOrgão).click()
   }
+
+  ValidarCadastro(){
+    cy.get(Pagamentos.Mensagem).should('be.visible')  }
 
 }export default new PagesPagamentos()
