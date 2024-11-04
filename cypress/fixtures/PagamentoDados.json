@@ -7,9 +7,10 @@
     "DataNascimento": "01/01/1980",
     "Sexo": "1", 
     "Município": "1", 
+    "Cep":"40230077",
     "Endereço": "Rua Exemplo",
     "NumEndereço": "123",
     "Complemento": "Apto 101",
     "Bairro": "Centro"
-  
+    
 }

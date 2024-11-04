@@ -19,9 +19,15 @@ describe('Cadastro de Beneficiário', () => {
   })
   it('Cadastro Válido de Beneficiários ', () => {
    
-    cy.fixture('Dados').then((dados) => {
-    PagamentoPages.AdicionarBeneficiário(dados)
+    cy.fixture('PagamentoDados').then((dados) => {
+    PagamentoPages.InformaçõesBeneficiário(dados)
+   
   })
+
+  PagamentoPages.AdicionarOrgãoPagador('1')
+
+  
+  
 
   })
 
