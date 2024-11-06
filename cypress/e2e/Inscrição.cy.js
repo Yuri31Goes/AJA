@@ -40,6 +40,7 @@ describe.only('Anexar Arquivos e Enviar inscrição', () => {
   it('Realizar Incrição válida e validar a incrição', () => {
     
     InscriçãoPages.AnexarDocumenação(DadosCadastro)
+    InscriçãoPages.ValidarCandidatura()
   })
 
 

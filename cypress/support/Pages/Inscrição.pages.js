@@ -44,10 +44,22 @@ class InscriçãoPages{
       cy.get(candidatura.FormComplemento).type(DadosCadastro.Complemento)
       cy.get(candidatura.FormBairro).type(DadosCadastro.Bairro)
       cy.get(candidatura.FormCep).type(DadosCadastro.Cep)
-      cy.get(candidatura.NisUapload).selectFile('Teste.txt')
+      cy.get(candidatura.NisUapload).selectFile('Teste.png',{force: true})
+      cy.get(candidatura.CPFUapload).selectFile('Teste.png',{force: true})
+      cy.get(candidatura.ComprovanteUapload).selectFile('Teste.png',{force: true})
+      cy.get(candidatura.FotoUapload).selectFile('Teste.png',{force: true})
+      cy.get(candidatura.RGUapload).selectFile('Teste.png',{force: true})
+      cy.get(candidatura.DeclaUapload).selectFile('Teste.png',{force: true})
+      cy.get(candidatura.BoxDeclaração).click()
+      cy.get(candidatura.BntSalvar).click()
+      cy.get(candidatura.BntConfirmação).click()
 
 
 
+    }
+
+    ValidarCandidatura(){
+        cy.get(candidatura.Mensagem).should('exist')
     }
 
 } export default new InscriçãoPages()
