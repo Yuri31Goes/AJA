@@ -10,7 +10,7 @@ describe('Inscrição Válida de Candidato no sistema ', () => {
     Senha:'123456'
  }
   it('DADO que estou na tela de cadastro do candidato ', () => {
-    cy.visit('/')
+    cy.visit('http://172.16.0.229:8080/aja-participacao/login.xhtml')
     InscriçãoSistemaPages.ClicarbtnCadastroUsuário()
   })
 

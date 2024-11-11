@@ -16,7 +16,7 @@ class InscriçãoSistema {
     }
 
     CLicarbtnSalvar(){
-        cy.get(InscriçãoS.btnSalvar)
+        cy.get(InscriçãoS.btnSalvar).click()
     }
     
     VerificarMensagemdeCadastro(){
