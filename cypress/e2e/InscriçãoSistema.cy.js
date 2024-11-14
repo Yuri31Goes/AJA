@@ -5,12 +5,13 @@ describe(' Inscrição do Candidato no Sistema ', () => {
 describe('Inscrição Válida de Candidato no sistema ', () => {
   const DadosCadastroSistema = {
     Email:'teste@gmail.com',
-    CPF:'00000000000',
+    CPF:'643.382.141-39',
     DataNascimento:'10/06/2000',
     Senha:'123456'
  }
   it('DADO que estou na tela de cadastro do candidato ', () => {
-    cy.visit('http://172.16.0.229:8080/aja-participacao/login.xhtml')
+    //URL antiga até resolução do Bug
+    cy.visit('http://172.16.0.229:8080/aja-edital-inscricao/login.xhtml')
     InscriçãoSistemaPages.ClicarbtnCadastroUsuário()
   })
 

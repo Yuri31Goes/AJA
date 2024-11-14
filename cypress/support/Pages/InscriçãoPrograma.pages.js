@@ -45,4 +45,14 @@ class InscriçãoPrograma{
     cy.get(InscriçãoP.btnConfimarEnvio).click()
    }
 
+   ValidarInscrição(){
+      cy.get(InscriçãoP.liMensage).
+      should('exist')
+   }
+
+   ValidarCodigoInscrição(){
+      cy.get(InscriçãoP.liMensageInscrição).
+      should('exist')
+   }
+
 } export default new InscriçãoPrograma()

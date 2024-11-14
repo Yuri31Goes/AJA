@@ -4,7 +4,7 @@ describe(' Inscrição do Candidato no Programa ', () => {
 describe(' Inscrição válida de Candidato no Programa', () => {
 
   const DadosLogin = {
-    CPF:'608.360.120-70',
+    CPF:'643.382.141-39',
     Senha:'123456',
   }
 
@@ -34,7 +34,8 @@ describe(' Inscrição válida de Candidato no Programa', () => {
     Autodeclaração:'Teste.png',
   }
   it('DADO que estou na tela de envio da documentação', () => {
-    cy.visit('http://172.16.0.229:8080/aja-participacao/login.xhtml')
+    //URL antiga até resolução do Bug 
+    cy.visit('http://172.16.0.229:8080/aja-edital-inscricao/login.xhtml')
     InscriçãoProgramaPages.RealizarLogin(DadosLogin)
     InscriçãoProgramaPages.AcessarEnviodeDocumentação()
   })
@@ -54,11 +55,11 @@ describe(' Inscrição válida de Candidato no Programa', () => {
   })
 
   it('ENTÃO o sistema informa uma mensagem sobre candidatura enviada', () => {
-    
+     InscriçãoProgramaPages.ValidarInscrição()
   })
 
   it('E é gerado um código de inscrição', () => {
-
+      InscriçãoProgramaPages.ValidarCodigoInscrição()
   })
 
   it('E  o usuário é pode exportar as informações em PDF', () => {
