@@ -1,0 +1,20 @@
+export const AvaliarDocELEMENTS = {
+
+    inputLogin:'#inputLogin',
+    inputSenha:'#inputSenha',
+    btnEntrar:':nth-child(1) > .btn',
+    linkCandidatos: ':nth-child(8) > a',
+    selectStatusCandidato: ':nth-child(5) > :nth-child(1) > .form-group > .form-control',
+    btnConsultar:'#j_idt111 > .ui-button-text',
+    btnAbrirInscrição:'.ui-datatable-even > :nth-child(1) > a > .badge',
+    selectSituação01: '#j_idt147',
+    selectSituação02: '#j_idt174',
+    selectSituação03: '#j_idt201',
+    selectSituação04: '#j_idt228',
+    selectSituação05: '#j_idt255',
+    selectSituação06: '#j_idt284',
+    selectSituação07: '#j_idt311',
+    btnAprovar: '#j_idt335 > .ui-button-text',
+    btnConfirm:'#j_idt339 > .ui-button-text',
+    labelMensagem:'#j_idt328 > .ui-messages-info',
+}   
