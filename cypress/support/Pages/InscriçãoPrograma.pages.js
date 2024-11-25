@@ -2,11 +2,7 @@ import { InscriçãoProgramaELEMENTS as InscriçãoP } from "../Elements/Inscri�
 
 class InscriçãoPrograma{
 
-   RealizarLogin(Dados){
-    cy.get(InscriçãoP.inputLogin).type(Dados.CPF)
-    cy.get(InscriçãoP.inputSenha).type(Dados.Senha)
-    cy.get(InscriçãoP.btnEntrar).click()
-   }
+
 
    AcessarEnviodeDocumentação(){
     cy.get(InscriçãoP.btnEnvioDocumentação).click()
@@ -25,7 +21,6 @@ class InscriçãoPrograma{
       cy.get(InscriçãoP.inputBairro).type(Dados.Bairro)
       cy.get(InscriçãoP.inputCep).type(Dados.CEP)
    }
-
    InserirDocumentaçãoCadastro(Documentos){
       cy.get(InscriçãoP.inputuaploadNIS).selectFile(Documentos.NIS, {force: true})
       cy.get(InscriçãoP.inputuaploadCPF).selectFile(Documentos.CPF, {force: true})
@@ -35,24 +30,19 @@ class InscriçãoPrograma{
       cy.get(InscriçãoP.inputuaploadRGFrente).selectFile(Documentos.RGFrente, {force: true})
       cy.get(InscriçãoP.inputuaploadAutodeclaração).selectFile(Documentos.Autodeclaração, {force: true})
    }
-
    ClicarcheckboxDeclaração(){
     cy.get(InscriçãoP.checkboxDeclaração).click()
    }
-
    ClicarbtnEnviar(){
     cy.get(InscriçãoP.btnEnviar).click()
     cy.get(InscriçãoP.btnConfimarEnvio).click()
    }
-
    ValidarInscrição(){
       cy.get(InscriçãoP.liMensage).
       should('exist')
    }
-
    ValidarCodigoInscrição(){
       cy.get(InscriçãoP.liMensageInscrição).
       should('exist')
    }
-
 } export default new InscriçãoPrograma()

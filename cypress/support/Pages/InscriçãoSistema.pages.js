@@ -6,7 +6,6 @@ class InscriçãoSistema {
     ClicarbtnCadastroUsuário(){
         cy.get(InscriçãoS.btnCadastrar).click()
     }
-
     DigitarCamposCadastro(Dados){
       cy.get(InscriçãoS.inputEmail).type(Dados.Email)
       cy.get(InscriçãoS.inputCPF).type(Dados.CPF)
@@ -14,16 +13,12 @@ class InscriçãoSistema {
       cy.get(InscriçãoS.inputSenha).type(Dados.Senha)
       cy.get(InscriçãoS.inputRepetirSenha).type(Dados.Senha)
     }
-
     CLicarbtnSalvar(){
         cy.get(InscriçãoS.btnSalvar).click()
     }
-    
     VerificarMensagemdeCadastro(){
     }
-    
     VerificarRedrecionamentoLogin(){
-        
     }
 
 }export default new InscriçãoSistema()

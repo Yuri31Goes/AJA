@@ -1,13 +1,12 @@
 import InscriçãoProgramaPages from "../support/Pages/InscriçãoPrograma.pages"
-
+import LoginPages from "../support/Pages/Login.pages"
 describe(' Inscrição do Candidato no Programa ', () => {
 describe(' Inscrição válida de Candidato no Programa', () => {
 
   const DadosLogin = {
-    CPF:'643.382.141-39',
+    CPF:'528.145.481-15',
     Senha:'123456',
   }
-
   const DadosCadastro = {
     Nome: 'João Silva (Teste Yuri - 01)',
     NomeMãe: 'Maria Silva',
@@ -20,10 +19,7 @@ describe(' Inscrição válida de Candidato no Programa', () => {
     Complemento: 'Apto 45',
     Bairro: 'Centro',
     CEP: '01001-000'
-
-
   }
-
   const Documentos = {
     NIS:'Teste.png',
     CPF:'Teste.png',
@@ -34,36 +30,27 @@ describe(' Inscrição válida de Candidato no Programa', () => {
     Autodeclaração:'Teste.png',
   }
   it('DADO que estou na tela de envio da documentação', () => {
-    //URL antiga até resolução do Bug 
-    cy.visit('http://172.16.0.229:8080/aja-edital-inscricao/login.xhtml')
-    InscriçãoProgramaPages.RealizarLogin(DadosLogin)
+    cy.visit('http://172.16.0.229:8080/aja-participacao/login.xhtml')
+    LoginPages.RealizarLogin(DadosLogin)
     InscriçãoProgramaPages.AcessarEnviodeDocumentação()
   })
-
   it('QUANDO insiro os campos de cadastro ', () => {
      InscriçãoProgramaPages.DigitarCamposdeCadastro(DadosCadastro)
   })
-
   it('E insiro a documentação ', () => {
     InscriçãoProgramaPages.InserirDocumentaçãoCadastro(Documentos)
   })
-
   it('E clico no salvamento das informações', () => {
     InscriçãoProgramaPages.ClicarcheckboxDeclaração()
     InscriçãoProgramaPages.ClicarbtnEnviar()
-
   })
-
   it('ENTÃO o sistema informa uma mensagem sobre candidatura enviada', () => {
-     InscriçãoProgramaPages.ValidarInscrição()
+    InscriçãoProgramaPages.ValidarInscrição()
   })
-
   it('E é gerado um código de inscrição', () => {
-      InscriçãoProgramaPages.ValidarCodigoInscrição()
+    InscriçãoProgramaPages.ValidarCodigoInscrição()
   })
-
   it('E  o usuário é pode exportar as informações em PDF', () => {
-
   })
 })
 

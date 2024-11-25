@@ -2,25 +2,16 @@ import { AvaliarDocELEMENTS as doc } from "../Elements/AvaliarDoc.elements"
 
 class AvaliarDocPages{
 
-        RealizarLogin(Dados){
-        cy.get(doc.inputLogin).type(Dados.CPF)
-        cy.get(doc.inputSenha).type(Dados.Senha)
-        cy.get(doc.btnEntrar).click()
-       }
-
        AcessarGerenciarCandidatos(){
         cy.get(doc.linkCandidatos).click()
        }
-
        ConsultarCandidato(){
         cy.get(doc.selectStatusCandidato).select('Aguardando Análise')
         cy.get(doc.btnConsultar).click()
        }
-
        AbrirInscrição(){
         cy.get(doc.btnAbrirInscrição).click()
        }
-
        AprovarDocumentação(Situação){
         cy.get(doc.selectSituação01).select(Situação.Aprovado)
         cy.get(doc.selectSituação02).select(Situação.Aprovado)
@@ -29,9 +20,7 @@ class AvaliarDocPages{
         cy.get(doc.selectSituação05).select(Situação.Aprovado)
         cy.get(doc.selectSituação06).select(Situação.Aprovado)
         cy.get(doc.selectSituação07).select(Situação.Aprovado)
-
        }
-
        ReprovarDocumentação(Situação){
         cy.get(doc.selectSituação01).select(Situação.Reprovado)
         cy.get(doc.selectSituação02).select(Situação.Reprovado)
@@ -40,19 +29,15 @@ class AvaliarDocPages{
         cy.get(doc.selectSituação05).select(Situação.Reprovado)
         cy.get(doc.selectSituação06).select(Situação.Reprovado)
         cy.get(doc.selectSituação07).select(Situação.Reprovado)
-
        }
-
        ClicarAprovar(){
         cy.get(doc.btnAprovar).click()
         cy.get(doc.btnConfirm).click()
        }
-
        ClicarReprovar(){
        // Adicionar Botão Reprovar cy.get(doc.btnAprovar).click()
         cy.get(doc.btnConfirm).click()
        }
-
        ValidarMensagemAprovado(){
         cy.get(doc.labelMensagem).should('have.text','Documentação aprovada com sucesso!')
        }

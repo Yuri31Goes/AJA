@@ -1,8 +1,4 @@
 export const AvaliarDocELEMENTS = {
-
-    inputLogin:'#inputLogin',
-    inputSenha:'#inputSenha',
-    btnEntrar:':nth-child(1) > .btn',
     linkCandidatos: ':nth-child(8) > a',
     selectStatusCandidato: ':nth-child(5) > :nth-child(1) > .form-group > .form-control',
     btnConsultar:'#j_idt111 > .ui-button-text',
