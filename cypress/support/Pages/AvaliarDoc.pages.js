@@ -5,8 +5,9 @@ class AvaliarDocPages{
        AcessarGerenciarCandidatos(){
         cy.get(doc.linkCandidatos).click()
        }
-       ConsultarCandidato(){
+       ConsultarCandidato(dados){
         cy.get(doc.selectStatusCandidato).select('Aguardando Análise')
+        cy.get(doc.inputCpf).type(dados.CPF)
         cy.get(doc.btnConsultar).click()
        }
        AbrirInscrição(){
@@ -29,17 +30,28 @@ class AvaliarDocPages{
         cy.get(doc.selectSituação05).select(Situação.Reprovado)
         cy.get(doc.selectSituação06).select(Situação.Reprovado)
         cy.get(doc.selectSituação07).select(Situação.Reprovado)
+        cy.get(doc.selectMotivo1).select('DOCUMENTO INVÁLIDO')
+        cy.get(doc.selectMotivo2).select('DOCUMENTO INVÁLIDO')
+        cy.get(doc.selectMotivo3).select('DOCUMENTO INVÁLIDO')
+        cy.get(doc.selectMotivo4).select('DOCUMENTO INVÁLIDO')
+        cy.get(doc.selectMotivo5).select('DOCUMENTO INVÁLIDO')
+        cy.get(doc.selectMotivo6).select('DOCUMENTO INVÁLIDO')
+        cy.get(doc.selectMotivo7).select('DOCUMENTO INVÁLIDO')
+       
        }
        ClicarAprovar(){
         cy.get(doc.btnAprovar).click()
         cy.get(doc.btnConfirm).click()
        }
        ClicarReprovar(){
-       // Adicionar Botão Reprovar cy.get(doc.btnAprovar).click()
+        cy.get(doc.btnReprovar).click()
         cy.get(doc.btnConfirm).click()
        }
        ValidarMensagemAprovado(){
         cy.get(doc.labelMensagem).should('have.text','Documentação aprovada com sucesso!')
+       }
+       ValidarMensagemReprovado(){
+       cy.get(doc.labelMensagem).should('have.text','Documentação reprovada com sucesso!')
        }
 
   

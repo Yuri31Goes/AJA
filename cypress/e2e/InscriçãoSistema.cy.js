@@ -5,7 +5,7 @@ describe(' Inscrição do Candidato no Sistema ', () => {
 describe('Inscrição Válida de Candidato no sistema ', () => {
   const DadosCadastroSistema = {
     Email:'testes01aja@gmail.com',
-    CPF:'528.145.481-15',
+    CPF:'031.774.459-31',
     DataNascimento:'10/06/2000',
     Senha:'123456'
  }

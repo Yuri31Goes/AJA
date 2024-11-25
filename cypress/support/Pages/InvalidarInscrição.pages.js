@@ -5,7 +5,8 @@ import { InvalidarIscriçãoELEMENTS as I } from "../Elements/InvalidarInscriç�
         AcessarInvalidarInscrição(){
             cy.get(I.linkInvalidarInscrição).click()
         }
-        ConsultarCandidatos(){
+        ConsultarCandidatos(dado){
+            cy.get(I.inputCpf).type(dado.inputCPF)
             cy.get(I.btnConsultarCandidatos).click()
         }
         AbrirInscrição(){
@@ -13,6 +14,10 @@ import { InvalidarIscriçãoELEMENTS as I } from "../Elements/InvalidarInscriç�
         }
         ClicarInvalidarInscrição(){
             cy.get(I.btnInvalidarInscrição).click()
+            cy.get(I.btnConfirmar).click()
+        }
+        ValidarMensagemInvalidar(){
+            cy.get(I.mensagem).should('have.text','Inscrição invalidada com sucesso!')
         }
     }export default new InvalidarInscrição()
 

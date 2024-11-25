@@ -7,6 +7,9 @@ describe('Avaliar Posse Candidato', () => {
     CPF:'138.099.210-92',
     Senha:'123456',
   }
+  const dados = {
+     InputCPF:'528.145.481-15',
+  }
   describe('Aprovar Posse ', () => {
   it('DADO que estou na tela de Gerenciar Posse', () => {
     cy.visit("http://172.16.0.229:8080/aja-participacao/login.xhtml")
@@ -14,7 +17,7 @@ describe('Avaliar Posse Candidato', () => {
     PossePages.AcessarGerenciarPosse()
    })
    it('QUANDO Consulto os candidatos', () => {
-     PossePages.ConsultarCandidatos()
+     PossePages.ConsultarCandidatos(dados)
   })
   it('E Clico em Abrir Cadastro de candidatos com a Posse "Não Anexada" ', () => {
     PossePages.AbrirCadastro()
@@ -37,7 +40,7 @@ describe('Avaliar Posse Candidato', () => {
     PossePages.AcessarGerenciarPosse()
    })
    it('QUANDO Consulto os candidatos', () => {
-     PossePages.ConsultarCandidatos()
+     PossePages.ConsultarCandidatos(dados)
   })
   it('E Clico em Abrir Cadastro de candidatos com a Posse "Não Anexada" ', () => {
     PossePages.AbrirCadastro()

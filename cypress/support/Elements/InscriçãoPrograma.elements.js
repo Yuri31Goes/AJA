@@ -35,4 +35,5 @@ export const InscriçãoProgramaELEMENTS = {
     btnConfimarEnvio:'#j_idt339 > .ui-button-text',
     liMensage:'#j_idt315 > .ui-messages-info',
     liMensageInscrição:'#mensagem > .ui-messages-info',
+    btnExportarPDF:'#j_idt334 > .ui-button-text',
 }

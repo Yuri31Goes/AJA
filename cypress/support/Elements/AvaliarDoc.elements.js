@@ -13,4 +13,15 @@ export const AvaliarDocELEMENTS = {
     btnAprovar: '#j_idt335 > .ui-button-text',
     btnConfirm:'#j_idt339 > .ui-button-text',
     labelMensagem:'#j_idt328 > .ui-messages-info',
+    inputCpf:':nth-child(3) > :nth-child(1) > .form-group > .form-control',
+    selectMotivo1:'#motivoNis > .form-group > .form-control',
+    selectMotivo2:'#motivoCpf > .form-group > .form-control',
+    selectMotivo3:'#motivoComprovante > .form-group > .form-control',
+    selectMotivo4:'#motivoFoto > .form-group > .form-control',
+    selectMotivo5:'#motivoRg > .form-group > .form-control',
+    selectMotivo6:'#motivoRgVerso > .form-group > .form-control',
+    selectMotivo7:'#motivoCompEnd > .form-group > .form-control',
+    btnReprovar:'#j_idt336 > .ui-button-text',
+
+
 }   

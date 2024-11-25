@@ -4,7 +4,7 @@ describe(' Inscrição do Candidato no Programa ', () => {
 describe(' Inscrição válida de Candidato no Programa', () => {
 
   const DadosLogin = {
-    CPF:'528.145.481-15',
+    CPF:'031.774.459-31',
     Senha:'123456',
   }
   const DadosCadastro = {
@@ -51,6 +51,7 @@ describe(' Inscrição válida de Candidato no Programa', () => {
     InscriçãoProgramaPages.ValidarCodigoInscrição()
   })
   it('E  o usuário é pode exportar as informações em PDF', () => {
+    InscriçãoProgramaPages.ClicaremExportarPDF()
   })
 })
 

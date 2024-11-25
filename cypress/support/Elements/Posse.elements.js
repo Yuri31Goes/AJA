@@ -12,6 +12,7 @@ export const PosseELEMENTS = {
     textMensagem:'.ui-messages-info',
     selectMotivo:'#motivoTermo > .form-group > .form-control',
     btnReprovar:'#j_idt122 > .ui-button-text',
+    inputCpf:':nth-child(2) > :nth-child(1) > .form-group > .form-control'
 
 
 }

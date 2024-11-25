@@ -5,6 +5,7 @@ describe('Invalidar Inscrição', () => {
   const dados = {
     CPF:'494.322.730-91',
     Senha:'123456',
+    inputCPF:'811.466.481-97'
   }
 describe('Invalidar Inscrição do candidato   ', () => {
   it('DADO que estou na tela de Invalidar Inscrição', () => {
@@ -13,7 +14,7 @@ describe('Invalidar Inscrição do candidato   ', () => {
     InvalidarInscriçãoPages.AcessarInvalidarInscrição()
   })
   it('QUANDO Consulto candidatos', () => {
-    InvalidarInscriçãoPages.ConsultarCandidatos()
+    InvalidarInscriçãoPages.ConsultarCandidatos(dados)
   })
   it('E Abro a Inscrição do candidato', () => {
      InvalidarInscriçãoPages.AbrirInscrição()
@@ -22,6 +23,7 @@ describe('Invalidar Inscrição do candidato   ', () => {
     InvalidarInscriçãoPages.ClicarInvalidarInscrição()
   })
   it('ENTÃO o sistema informa uma mensagem que o candidato foi invalidada ', () => {
+    InvalidarInscriçãoPages.ValidarMensagemInvalidar()
   })
  }) 
 })

@@ -38,11 +38,16 @@ class InscriçãoPrograma{
     cy.get(InscriçãoP.btnConfimarEnvio).click()
    }
    ValidarInscrição(){
+      cy.wait(2000)
       cy.get(InscriçãoP.liMensage).
       should('exist')
    }
    ValidarCodigoInscrição(){
+      cy.wait(2000)
       cy.get(InscriçãoP.liMensageInscrição).
       should('exist')
+   }
+   ClicaremExportarPDF(){
+      cy.get(InscriçãoP.btnExportarPDF).click()
    }
 } export default new InscriçãoPrograma()

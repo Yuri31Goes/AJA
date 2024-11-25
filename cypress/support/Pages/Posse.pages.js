@@ -6,8 +6,9 @@ class Posse{
         cy.get(P.linkGerenciarPosse).click()
         cy.get(P.spanEdital).click()
     }
-    ConsultarCandidatos(){
+    ConsultarCandidatos(dados){
         cy.get(P.selectStatus).select('Não Anexado')
+        cy.get(P.inputCpf).type(dados.InputCPF)
         cy.get(P.btnConsultarCandidatos).click()
     }
     AbrirCadastro(){

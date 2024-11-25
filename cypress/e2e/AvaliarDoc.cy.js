@@ -1,7 +1,7 @@
 import AvaliarDocPages from "../support/Pages/AvaliarDoc.pages"
 import LoginPages from "../support/Pages/Login.pages"
 
-describe('Avaliar Documentação do Candidato', () => {
+describe.only('Avaliar Documentação do Candidato', () => {
   const DadosLogin = {
     CPF:'138.099.210-92',
     Senha:'123456',
@@ -10,14 +10,17 @@ describe('Avaliar Documentação do Candidato', () => {
     Aprovado:'Aprovado',
     Reprovado:'Reprovado'
   }
-describe('Aprovar Documentação', () => {
+  const dados = {
+    CPF:'288.439.131-23	'	
+  }
+describe.only('Aprovar Documentação', () => {
   it('DADO que estou na tela de Gerenciar Candidatos', () => {
     cy.visit('http://172.16.0.229:8080/aja-participacao/login.xhtml')
     LoginPages.RealizarLogin(DadosLogin)
     AvaliarDocPages.AcessarGerenciarCandidatos()
   })
   it('QUANDO Consulto um candidato com Status “Aguardando Análise”', () => {
-     AvaliarDocPages.ConsultarCandidato()
+     AvaliarDocPages.ConsultarCandidato(dados)
   })
   it('E Abro a Inscrição do candidato', () => {
     AvaliarDocPages.AbrirInscrição()
@@ -32,14 +35,14 @@ it('ENTÃO o sistema informa uma mensagem que o candidato foi Aprovado', () => {
   AvaliarDocPages.ValidarMensagemAprovado()
 })   
 })
-describe.only('Reprovar Documentação', () => {
+describe('Reprovar Documentação', () => {
   it('DADO que estou na tela de Gerenciar Candidatos', () => {
     cy.visit('http://172.16.0.229:8080/aja-participacao/login.xhtml')
     LoginPages.RealizarLogin(DadosLogin)
     AvaliarDocPages.AcessarGerenciarCandidatos()
   })
   it('QUANDO Consulto um candidato com Status “Aguardando Análise”', () => {
-     AvaliarDocPages.ConsultarCandidato()
+     AvaliarDocPages.ConsultarCandidato(dados)
   })
   it('E Abro a Inscrição do candidato', () => {
     AvaliarDocPages.AbrirInscrição()
@@ -51,7 +54,7 @@ it('E Clico em Reprovar', () => {
    AvaliarDocPages.ClicarReprovar()
   })
 it('ENTÃO o sistema informa uma mensagem que o candidato foi Reprovado', () => {
-  AvaliarDocPages.ValidarMensagemAprovado()
+  AvaliarDocPages.ValidarMensagemReprovado()
   })  
 }) 
 })

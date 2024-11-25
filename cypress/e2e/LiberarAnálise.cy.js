@@ -6,6 +6,7 @@ describe('Liberar Análise do candidato  ', () => {
   const dados = {
     CPF:'494.322.730-91',
     Senha:'123456',
+    inputCpf:'288.439.131-23'
   }
 describe('Liberar Análise do candidato   ', () => {
   it('DADO que estou na tela de Liberar Análise', () => {
@@ -14,7 +15,7 @@ describe('Liberar Análise do candidato   ', () => {
     LiberarAnálisePages.AcessarLiberarAnálise()
   })
   it('QUANDO Consulto candidatos', () => {
-    LiberarAnálisePages.ConsultarCandidatos()
+    LiberarAnálisePages.ConsultarCandidatos(dados)
   })
   it('E Abro a Inscrição do candidato', () => {
     LiberarAnálisePages.AbrirInscrição()
@@ -23,6 +24,7 @@ describe('Liberar Análise do candidato   ', () => {
     LiberarAnálisePages.ClicarbtnLiberarAnálise()
   })
   it('ENTÃO o sistema informa uma mensagem que a inscrição do candidato foi liberada para análise', () => { 
+    LiberarAnálisePages.ValidarMensagem()
   }) 
 })  
 })
