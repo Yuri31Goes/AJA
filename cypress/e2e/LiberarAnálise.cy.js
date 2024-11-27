@@ -6,7 +6,8 @@ describe('Liberar Análise do candidato  ', () => {
   const dados = {
     CPF:'494.322.730-91',
     Senha:'123456',
-    inputCpf:'288.439.131-23'
+    //Altere o CPF para Liberar a análise do candidato
+    inputCpf:'359.117.480-70'
   }
 describe('Liberar Análise do candidato   ', () => {
   it('DADO que estou na tela de Liberar Análise', () => {

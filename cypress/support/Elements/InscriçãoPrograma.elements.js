@@ -33,7 +33,7 @@ export const InscriçãoProgramaELEMENTS = {
     checkboxDeclaração:'.col-md-12 > .form-group > input',
     btnEnviar:'#j_idt333 > .ui-button-text',
     btnConfimarEnvio:'#j_idt339 > .ui-button-text',
-    liMensage:'#j_idt315 > .ui-messages-info',
+    liMensage:'.ui-messages-info',
     liMensageInscrição:'#mensagem > .ui-messages-info',
     btnExportarPDF:'#j_idt334 > .ui-button-text',
 }

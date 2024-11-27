@@ -8,9 +8,9 @@ describe('Avaliar Posse Candidato', () => {
     Senha:'123456',
   }
   const dados = {
-     InputCPF:'528.145.481-15',
+     InputCPF:'878.133.142-80',
   }
-  describe('Aprovar Posse ', () => {
+  describe.only('Aprovar Posse ', () => {
   it('DADO que estou na tela de Gerenciar Posse', () => {
     cy.visit("http://172.16.0.229:8080/aja-participacao/login.xhtml")
     LoginPages.RealizarLogin(DadosLogin)
@@ -33,7 +33,7 @@ describe('Avaliar Posse Candidato', () => {
   })
 
  })
- describe.only('Reprovar Posse ', () => {
+ describe('Reprovar Posse ', () => {
   it('DADO que estou na tela de Gerenciar Posse', () => {
     cy.visit("http://172.16.0.229:8080/aja-participacao/login.xhtml")
     LoginPages.RealizarLogin(DadosLogin)

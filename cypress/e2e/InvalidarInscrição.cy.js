@@ -5,7 +5,8 @@ describe('Invalidar Inscrição', () => {
   const dados = {
     CPF:'494.322.730-91',
     Senha:'123456',
-    inputCPF:'811.466.481-97'
+    //Altere o CPF para invalidar a inscrição
+    inputCPF:'359.117.480-70'
   }
 describe('Invalidar Inscrição do candidato   ', () => {
   it('DADO que estou na tela de Invalidar Inscrição', () => {

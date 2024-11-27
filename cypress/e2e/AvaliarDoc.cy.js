@@ -11,9 +11,9 @@ describe.only('Avaliar Documentação do Candidato', () => {
     Reprovado:'Reprovado'
   }
   const dados = {
-    CPF:'288.439.131-23	'	
+    CPF:'814.534.487-56	'	
   }
-describe.only('Aprovar Documentação', () => {
+describe('Aprovar Documentação', () => {
   it('DADO que estou na tela de Gerenciar Candidatos', () => {
     cy.visit('http://172.16.0.229:8080/aja-participacao/login.xhtml')
     LoginPages.RealizarLogin(DadosLogin)
@@ -35,7 +35,7 @@ it('ENTÃO o sistema informa uma mensagem que o candidato foi Aprovado', () => {
   AvaliarDocPages.ValidarMensagemAprovado()
 })   
 })
-describe('Reprovar Documentação', () => {
+describe.only('Reprovar Documentação', () => {
   it('DADO que estou na tela de Gerenciar Candidatos', () => {
     cy.visit('http://172.16.0.229:8080/aja-participacao/login.xhtml')
     LoginPages.RealizarLogin(DadosLogin)
